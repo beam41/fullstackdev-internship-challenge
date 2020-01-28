@@ -37,7 +37,7 @@ class App extends Component {
 
   render() {
     return (
-      <Container className={styles.app}>
+      <Container fluid className={styles.app}>
         <Row>
           <Col xs="12" lg="8">
             {this.state.products && <SelectionSection products={this.state.products} />}

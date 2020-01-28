@@ -1,0 +1,29 @@
+.prodBox {
+    text-align: center;
+    padding: 15px 0;
+
+    & * {
+        max-width: 100%;
+    }
+
+    & img {
+        margin: auto;
+    }
+
+    & p {
+        margin: auto;
+        margin-bottom: 0.25rem;
+    }
+}
+
+.imgWarpper {
+    display: flex;
+    justify-items: center;
+}
+
+@media (min-width: 992px) {
+    .container {
+        height: 100vh;
+        overflow-y: scroll;
+    }
+}
