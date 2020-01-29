@@ -25,18 +25,23 @@ export default class ReturnSummary extends Component {
   };
 
   render() {
-    const pluralizeCoin = () => {
-      return "coin" + this.props.coinCount > 1 ? "s" : "";
+    /**
+     * Use to pluralize coin
+     * @param   {boolean} cap Capitaized word
+     * @returns {string}  word coin(s)
+     */
+    const pluralizeCoin = cap => {
+      return (cap ? "C" : "c") + "oin" + (this.props.coinCount > 1 ? "s" : "");
     };
 
     return (
       <Modal show={this.props.show} onHide={this.props.sumBoxClose}>
         <Modal.Header closeButton>
-          <Modal.Title>{pluralizeCoin()} Returned!</Modal.Title>
+          <Modal.Title>{pluralizeCoin(true)} Returned!</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <p>
-            Here is your returned {pluralizeCoin()}: {this.props.money} baht
+            {`Here is your returned ${pluralizeCoin(false)}`}: {this.props.money} baht
           </p>
           <p>10: {this.props.coins["10"]}</p>
           <p>5: {this.props.coins["5"]}</p>
@@ -44,7 +49,9 @@ export default class ReturnSummary extends Component {
           <p>1: {this.props.coins["1"]}</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={this.props.sumBoxClose}>Ok</Button>
+          <Button variant="success" onClick={this.props.sumBoxClose}>
+            Ok
+          </Button>
         </Modal.Footer>
       </Modal>
     );

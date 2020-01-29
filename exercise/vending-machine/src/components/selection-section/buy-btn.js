@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import Button from "react-bootstrap/Button";
+import styles from "./sel-sec.module.scss";
 
 /**
  * Different button for different state
@@ -28,7 +29,11 @@ export default class BuyBtn extends Component {
       return <NotEnMoneyBtn id={this.props.product.id} />;
     }
     return (
-      <Button onClick={() => this.props.handleBuy(this.props.product)} id={"prod_" + this.props.product.id + "_btn"}>
+      <Button
+        variant="outline-secondary"
+        onClick={() => this.props.handleBuy(this.props.product)}
+        id={"prod_" + this.props.product.id + "_btn"}
+      >
         Buy
       </Button>
     );
@@ -38,9 +43,11 @@ export default class BuyBtn extends Component {
 function OutOfStockBtn({ id }) {
   return (
     <OverlayTrigger placement="bottom" overlay={<Tooltip>Out of stock!</Tooltip>}>
-      <Button disabled id={"prod_" + id + "_btn"}>
-        Buy
-      </Button>
+      <span className="d-inline-block">
+        <Button variant="outline-danger" className={styles.disabled} disabled id={"prod_" + id + "_btn"}>
+          Buy
+        </Button>
+      </span>
     </OverlayTrigger>
   );
 }
@@ -48,9 +55,11 @@ function OutOfStockBtn({ id }) {
 function NotEnMoneyBtn({ id }) {
   return (
     <OverlayTrigger placement="bottom" overlay={<Tooltip>Not Enought Money!</Tooltip>}>
-      <Button disabled id={"prod_" + id + "_btn"}>
-        Buy
-      </Button>
+      <span className="d-inline-block">
+        <Button variant="outline-secondary" className={styles.disabled} disabled id={"prod_" + id + "_btn"}>
+          Buy
+        </Button>
+      </span>
     </OverlayTrigger>
   );
 }

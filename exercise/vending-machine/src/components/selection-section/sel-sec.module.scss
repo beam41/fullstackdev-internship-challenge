@@ -1,6 +1,8 @@
-.prodBox {
+@import '../../var.scss';
+
+.prodCol {
     text-align: center;
-    padding: 15px 0;
+    padding: 15px;
 
     & * {
         max-width: 100%;
@@ -12,22 +14,46 @@
 
     & p {
         margin: auto;
-        margin-bottom: 0.25rem;
+        margin-bottom: 1rem;
     }
 }
 
 .imgWarpper {
     display: flex;
     justify-items: center;
+    background-color: #f7f7f7;
+    margin-bottom: 1rem;
 }
 
 @media (min-width: 992px) {
     .container {
-        height: 100vh;
         overflow-y: scroll;
     }
+
+    .containerWrapper {
+        height: 100vh;
+    }
+
 }
 
 .display {
     padding-bottom: 50px;
+}
+
+.containerWrapper {
+    display: flex;
+    padding: 20px 5px;
+}
+
+.container {
+    @include machine-border;
+}
+
+.prodBox {
+    @include machine-border;
+    padding: 20px;
+}
+
+.disabled {
+    pointer-events: none;
 }

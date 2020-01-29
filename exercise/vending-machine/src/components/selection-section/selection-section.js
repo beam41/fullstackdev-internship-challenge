@@ -24,13 +24,17 @@ export default class SelectionSection extends Component {
 
   render() {
     return (
-      <Container className={styles.container}>
-        <Row className={styles.display}>
-          {this.props.products.map(val => {
-            return <ProductBox product={val} key={val.id} money={this.props.money} handleBuy={this.props.handleBuy} />;
-          })}
-        </Row>
-      </Container>
+      <div className={styles.containerWrapper}>
+        <Container className={styles.container}>
+          <Row className={styles.display}>
+            {this.props.products.map(val => {
+              return (
+                <ProductBox product={val} key={val.id} money={this.props.money} handleBuy={this.props.handleBuy} />
+              );
+            })}
+          </Row>
+        </Container>
+      </div>
     );
   }
 }

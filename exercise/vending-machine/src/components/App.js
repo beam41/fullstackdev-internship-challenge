@@ -10,7 +10,6 @@ import BuySummary from "./popup/buy-summary";
 import { hot } from "react-hot-loader";
 import ReturnSummary from "./popup/return-summary";
 
-
 class App extends Component {
   constructor() {
     super();
@@ -115,12 +114,12 @@ class App extends Component {
         <h1 className={styles.header}>Vending Machine</h1>
         <Container fluid className={styles.app}>
           <Row>
-            <Col xs="12" lg="8">
+            <Col xs={{ span: 12, order: 2 }} lg={{ span: 8, order: 1 }}>
               {this.state.products && (
                 <SelectionSection products={this.state.products} money={this.state.money} handleBuy={this.handleBuy} />
               )}
             </Col>
-            <Col xs="12" lg="4">
+            <Col xs={{ span: 12, order: 1 }} lg={{ span: 4, order: 2 }}>
               <CoinSection addMoney={this.addMoney} money={this.state.money} handleReturn={this.handleReturn} />
             </Col>
           </Row>

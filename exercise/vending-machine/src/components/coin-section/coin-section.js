@@ -27,32 +27,29 @@ export default class CoinSection extends Component {
       <div className={styles.flexbox}>
         <div className={styles.containbox}>
           <div className={styles.stylizedbox}>
-            <div class={styles.moneyDisp}>
+            <div className={styles.moneyDisp}>
               <p id="money">
                 <strong>{this.props.money}</strong>
               </p>
             </div>
             <div className={styles.coinInput}>
-              <span class={styles.coinWrap}>
-                <TenCoin onClick={() => this.props.addMoney(10)} id="coin_ten_btn" />
-              </span>
-              <span class={styles.coinWrap}>
-                <OtherCoin onClick={() => this.props.addMoney(5)} id="coin_five_btn" value={5} />
-              </span>
-              <span class={styles.coinWrap}>
-                <OtherCoin onClick={() => this.props.addMoney(2)} id="coin_two_btn" value={2} />
-              </span>
-              <span class={styles.coinWrap}>
-                <OtherCoin onClick={() => this.props.addMoney(1)} id="coin_one_btn" value={1} />
-              </span>
+              <TenCoin onClick={() => this.props.addMoney(10)} id="coin_ten_btn" />
+              <span className={styles.marginBreak}></span>
+              <OtherCoin onClick={() => this.props.addMoney(5)} id="coin_five_btn" value={5} />
+            </div>
+            <div className={styles.coinInput}>
+              <OtherCoin onClick={() => this.props.addMoney(2)} id="coin_two_btn" value={2} />
+              <span className={styles.marginBreak}></span>
+              <OtherCoin onClick={() => this.props.addMoney(1)} id="coin_one_btn" value={1} />
             </div>
             <div className={styles.trayPart}>
-              <div class={styles.leftPart}>
-                <div class={styles.coinInsert}></div>
-                <div class={styles.coinReturn}></div>
+              <div className={styles.leftPart}>
+                <div className={styles.coinInsert}></div>
+                <div className={styles.coinReturn}></div>
               </div>
-              <div class={styles.rightPart}>
+              <div className={styles.rightPart}>
                 <Button
+                  variant="warning"
                   onClick={() => this.props.handleReturn()}
                   disabled={this.props.money === 0}
                   id={styles.return_btn}

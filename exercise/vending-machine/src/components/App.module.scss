@@ -1,5 +1,9 @@
+@import '../var.scss';
+
 .app {
-    min-height: 100vh
+    min-height: 100vh;
+    box-shadow: inset 0px 0px 0px $machine-border-width $machine-border-color;
+    border-radius: $machine-border-radius;
 }
 
 .header {

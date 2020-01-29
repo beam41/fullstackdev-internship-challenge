@@ -79,7 +79,7 @@ export default class BuySummary extends Component {
           )}
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={this.props.sumBoxClose}>Ok</Button>
+          <Button variant="success" onClick={this.props.sumBoxClose}>Ok</Button>
         </Modal.Footer>
       </Modal>
     );

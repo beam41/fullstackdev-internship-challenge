@@ -48,13 +48,15 @@ export default class ProductBox extends Component {
     const { product, money } = this.props;
     return (
       // 3 and 2 and 1 box in order
-      <Col xl="4" md="6" xs="12" className={styles.prodBox} id={"prod_" + product.id}>
-        <div ref={this.imgWarpper} className={styles.imgWarpper} style={{ height: this.state.imgWidth }}>
-          <img src={product.image} alt={product.name} id={"prod_" + product.id + "_img"}></img>
+      <Col xl="4" md="6" xs="12" className={styles.prodCol} id={"prod_" + product.id}>
+        <div className={styles.prodBox}>
+          <div ref={this.imgWarpper} className={styles.imgWarpper} style={{ height: this.state.imgWidth }}>
+            <img src={product.image} alt={product.name} id={"prod_" + product.id + "_img"}></img>
+          </div>
+          <h3 id={"prod_" + product.id + "_name"}>{product.name}</h3>
+          <p id={"prod_" + product.id + "_price"}>{product.price + " baht"}</p>
+          <BuyBtn product={product} money={money} handleBuy={this.props.handleBuy} />
         </div>
-        <h3 id={"prod_" + product.id + "_name"}>{product.name}</h3>
-        <p id={"prod_" + product.id + "_price"}>{product.price + " baht"}</p>
-        <BuyBtn product={product} money={money} handleBuy={this.props.handleBuy} />
       </Col>
     );
   }

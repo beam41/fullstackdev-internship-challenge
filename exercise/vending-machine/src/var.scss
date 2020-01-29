@@ -1,0 +1,9 @@
+// file for all my variable
+$machine-border-color: #9e9e9e;
+$machine-border-width: 5px;
+$machine-border-radius: 20px;
+
+@mixin machine-border {
+    border: $machine-border-width solid $machine-border-color;
+    border-radius: $machine-border-radius;
+}
