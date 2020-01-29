@@ -21,11 +21,6 @@ class App extends Component {
        * @type {Product[]} */
       products: [],
       /**
-       * Id of the selecting product
-       * @type {number}
-       */
-      selecting: null,
-      /**
        * Current inserted money
        * @type {number}
        */
@@ -40,29 +35,13 @@ class App extends Component {
     });
   }
 
-  /**
-   * Change currently selecting product
-   * @param {number} id
-   */
-  changeSelecting(id) {
-    this.setState({ selecting: id });
-  }
-
-  /**
-   * get currently selecting product
-   * @type {Product}
-   */
-  get SelectingObj() {
-    return this.state.products.find(prod => this.state.selecting === prod.id);
-  }
-
   render() {
     return (
       <Container fluid className={styles.app}>
         <Row>
           <Col xs="12" lg="8">
             {this.state.products && (
-              <SelectionSection products={this.state.products} changeSelecting={this.changeSelecting} />
+              <SelectionSection products={this.state.products} />
             )}
           </Col>
           <Col xs="12" lg="4">

@@ -9,7 +9,6 @@ import styles from "./sel-sec.module.scss";
  * For rendering individual product box
  * @typedef {object} Props
  * @prop    {Product[]} products
- * @prop    {Function} changeSelecting
  *
  * @extends {Component<Props>}
  */
@@ -23,7 +22,7 @@ export default class SelectionSection extends Component {
       <Container className={styles.container}>
         <Row>
           {this.props.products.map(val => {
-            return <ProductBox product={val} key={val.id} changeSelecting={this.props.changeSelecting} />;
+            return <ProductBox product={val} key={val.id} />;
           })}
         </Row>
       </Container>

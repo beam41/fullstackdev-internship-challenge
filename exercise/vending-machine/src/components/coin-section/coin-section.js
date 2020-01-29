@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Button from "react-bootstrap/Button";
 
 /**
- * For inserting, refund coins and confirm to buy this item
+ * For inserting and refund coins
+ * 
  * @typedef {object} Props
  *
  * @extends {Component<Props>}
