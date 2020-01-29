@@ -1,0 +1,57 @@
+.coin {
+    border: 5px solid #9e9e9e;
+    border-radius: 100%;
+    height: 65px;
+    width: 65px;
+    transition-duration: 250ms;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #9e9e9e;
+
+        &>p {
+            color: white
+        }
+    }
+
+
+}
+
+.tenCoin:hover {
+    & .tenCoinInner {
+        background-color: #fdd835;
+
+        & p {
+            color: white
+        }
+    }
+}
+
+.tenCoinInner {
+    border: 4px solid #fdd835;
+    height: 53px;
+    width: 53px;
+    position: absolute;
+}
+
+.coinN {
+    transition-duration: 250ms;
+    color: #9e9e9e;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+
+    &::selection {
+        background: none;
+    }
+}
+
+.coinNTen {
+    color: #fdd835;
+    font-size: 1.75rem;
+}

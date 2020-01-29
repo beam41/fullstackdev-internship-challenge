@@ -1,12 +1,62 @@
-.smallbox {
-
-    border: 5px soild gray;
-    border-radius: 10px;
-}
-
 .flexbox {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.stylizedbox {
+    padding: 20px;
+    border: 5px solid #9e9e9e;
+    border-radius: 20px;
+}
+
+.moneyDisp {
+    border: 5px solid #000000;
+    border-radius: 20px;
+    background-color: #000;
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+    & p {
+        text-align: right;
+        margin: 0 10px;
+    }
+
+}
+
+.coinWrap {
+    margin: 0 5px;
+}
+
+.coinInsert {
+    border: 5px solid #9e9e9e;
+    border-radius: 20px;
+    width: 100px;
+    height: 18px;
+    background-color: black;
+    margin: 20px 0;
+}
+
+.coinReturn {
+    border: 5px solid #9e9e9e;
+    border-radius: 20px;
+    width: 100px;
+    height: 80px;
+}
+
+.trayPart {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.rightPart {
+    display: flex;
+    justify-content: center;
+
+    #return_btn {
+        margin: auto;
+    }
 }

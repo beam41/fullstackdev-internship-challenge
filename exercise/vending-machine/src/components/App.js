@@ -10,6 +10,7 @@ import BuySummary from "./popup/buy-summary";
 import { hot } from "react-hot-loader";
 import ReturnSummary from "./popup/return-summary";
 
+
 class App extends Component {
   constructor() {
     super();
@@ -111,6 +112,7 @@ class App extends Component {
   render() {
     return (
       <>
+        <h1 className={styles.header}>Vending Machine</h1>
         <Container fluid className={styles.app}>
           <Row>
             <Col xs="12" lg="8">
