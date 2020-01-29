@@ -4,7 +4,7 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 
 /**
- * Popup box shows bought item and coin change
+ * Popup box shows returned coin
  *
  * @typedef {object}    Props
  * @prop    {bool}      show
