@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import fetchService from "../services/fetch-service";
 import SelectionSection from "./selection-section/selection-section";
 import CoinSection from "./coin-section/coin-section";
+import { hot } from "react-hot-loader";
 
 class App extends Component {
   constructor() {
@@ -24,7 +25,13 @@ class App extends Component {
        * @type {number}
        */
       selecting: null,
+      /**
+       * Current inserted money
+       * @type {number}
+       */
+      money: 0,
     };
+    this.changeSelecting = this.changeSelecting.bind(this);
   }
 
   componentDidMount() {
@@ -33,17 +40,33 @@ class App extends Component {
     });
   }
 
-  changeSelecting() {}
+  /**
+   * Change currently selecting product
+   * @param {number} id
+   */
+  changeSelecting(id) {
+    this.setState({ selecting: id });
+  }
+
+  /**
+   * get currently selecting product
+   * @type {Product}
+   */
+  get SelectingObj() {
+    return this.state.products.find(prod => this.state.selecting === prod.id);
+  }
 
   render() {
     return (
       <Container fluid className={styles.app}>
         <Row>
           <Col xs="12" lg="8">
-            {this.state.products && <SelectionSection products={this.state.products} />}
+            {this.state.products && (
+              <SelectionSection products={this.state.products} changeSelecting={this.changeSelecting} />
+            )}
           </Col>
           <Col xs="12" lg="4">
-            <CoinSection />
+            <CoinSection selecting={this.SelectingObj} />
           </Col>
         </Row>
       </Container>
@@ -51,4 +74,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default hot(module)(App);

@@ -8,6 +8,7 @@ import Col from "react-bootstrap/Col";
  * Component for each box of product
  * @typedef {object}  Props
  * @prop    {Product} product
+ * @prop    {Function} changeSelecting
  *
  * @extends {Component<Props>}
  */
@@ -40,8 +41,9 @@ export default class ProductBox extends Component {
   }
 
   render() {
-    const { product } = this.props;
+    const { product, changeSelecting } = this.props;
     return (
+      // 3 and 2 and 1 box in order
       <Col xl="4" md="6" xs="12">
         <div className={styles.prodBox}>
           <div ref={this.imgWarpper} className={styles.imgWarpper} style={{ height: this.state.imgWidth }}>
@@ -49,7 +51,9 @@ export default class ProductBox extends Component {
           </div>
           <h3>{product.name}</h3>
           <p>{product.price.toFixed(2) + " baht"}</p>
-          <Button disabled={product.in_stock}>Select</Button>
+          <Button disabled={!product.in_stock} onClick={() => changeSelecting(product.id)}>
+            Select
+          </Button>
         </div>
       </Col>
     );
