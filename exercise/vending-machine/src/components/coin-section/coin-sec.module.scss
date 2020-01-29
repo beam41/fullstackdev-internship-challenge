@@ -10,6 +10,15 @@
 .stylizedbox {
     padding: 20px;
     @include machine-border;
+
+    &::before {
+        content: "▼Coin insert";
+        position: absolute;
+        transform: translate(-5px, -40px);
+        font-size: 0.75rem;
+        color: $machine-border-color;
+        font-family: $bffont;
+    }
 }
 
 .moneyDisp {
@@ -25,6 +34,15 @@
         margin: 0 10px;
     }
 
+    &::before {
+        content: "▼Money";
+        position: absolute;
+        transform: translate(15px, -20px);
+        font-size: 0.75rem;
+        color: black;
+        font-family: $bffont;
+    }
+
 }
 
 .coinWrap {
@@ -37,6 +55,15 @@
     height: 18px;
     background-color: black;
     margin: 20px 0;
+
+    &::before {
+        content: "▼Insert Coin Here";
+        position: absolute;
+        transform: translate(0, -22px);
+        font-size: 0.75rem;
+        color: $machine-border-color;
+        font-family: $bffont;
+    }
 }
 
 .coinReturn {
@@ -44,6 +71,15 @@
     width: 100px;
     height: 80px;
     background-color: #f0f0f0;
+
+    &::before {
+        content: "▼Coin Change";
+        position: absolute;
+        transform: translate(0, -22px);
+        font-size: 0.75rem;
+        color: $machine-border-color;
+        font-family: $bffont;
+    }
 }
 
 .trayPart {
@@ -68,11 +104,24 @@
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
+
+    &.first {
+        margin-top: 40px;
+    }
+
+    &.first::before {
+        content: "Coin Select";
+        position: absolute;
+        transform: translate(0, -17px);
+        font-size: 0.75rem;
+        color: $machine-border-color;
+        font-family: $bffont;
+    }
 }
 
 .containbox {
     flex: 0 2 auto;
-    padding: 20px;
+    padding: 25px 20px 20px 20px;
 }
 
 .marginBreak {

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import CoinPrinter from "./coin-printer/coin-printer";
 
 /**
  * Popup box shows bought item and coin change
@@ -64,22 +65,32 @@ export default class BuySummary extends Component {
                 </strong>
               </p>
               <p>
-                <strong>You inserted {this.props.money} baht</strong>
+                <strong>
+                  You inserted {this.props.money} baht{this.props.money === product.price ? ", exactly." : ""}
+                </strong>
               </p>
               {this.props.money > product.price && (
                 <>
-                  <p>Here is your Change: {this.props.money - product.price} baht</p>
-                  <p>10: {change.tens}</p>
-                  <p>5: {change.fives}</p>
-                  <p>2: {change.twos}</p>
-                  <p>1: {change.ones}</p>
+                  <p>Here is your change: {this.props.money - product.price} baht</p>
+                  <p>10 baht coin: {change.tens}</p>
+                  <p>5 baht coin: {change.fives}</p>
+                  <p>2 baht coin: {change.twos}</p>
+                  <p>1 baht coin: {change.ones}</p>
+                  <CoinPrinter coins={{ "10": change.tens, "5": change.fives, "2": change.twos, "1": change.ones }} />
+                </>
+              )}
+              {this.props.money === product.price && (
+                <>
+                  <p>No change!</p>
                 </>
               )}
             </>
           )}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="success" onClick={this.props.sumBoxClose}>Ok</Button>
+          <Button variant="success" onClick={this.props.sumBoxClose}>
+            Ok
+          </Button>
         </Modal.Footer>
       </Modal>
     );

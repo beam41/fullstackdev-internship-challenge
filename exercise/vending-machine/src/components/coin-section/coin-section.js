@@ -32,7 +32,7 @@ export default class CoinSection extends Component {
                 <strong>{this.props.money}</strong>
               </p>
             </div>
-            <div className={styles.coinInput}>
+            <div className={styles.coinInput + " " + styles.first}>
               <TenCoin onClick={() => this.props.addMoney(10)} id="coin_ten_btn" />
               <span className={styles.marginBreak}></span>
               <OtherCoin onClick={() => this.props.addMoney(5)} id="coin_five_btn" value={5} />

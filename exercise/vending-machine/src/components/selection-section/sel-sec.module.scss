@@ -42,11 +42,20 @@
 
 .containerWrapper {
     display: flex;
-    padding: 20px 5px;
+    padding: 25px 5px 20px 5px;
 }
 
 .container {
     @include machine-border;
+
+    &::before {
+        content: "▼Choose one";
+        position: absolute;
+        transform: translate(0, -20px);
+        font-size: 0.75rem;
+        color: $machine-border-color;
+        font-family: $bffont;
+    }
 }
 
 .prodBox {
