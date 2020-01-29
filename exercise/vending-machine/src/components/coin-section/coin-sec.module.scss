@@ -27,7 +27,7 @@
     background-color: #000;
     color: white;
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 30px;
 
     & p {
         text-align: right;
@@ -87,7 +87,7 @@
     justify-content: space-evenly;
 
     &>div {
-        padding: 10px 10px 0 10px;
+        padding: 0 10px;
     }
 }
 
@@ -104,10 +104,6 @@
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
-
-    &.first {
-        margin-top: 40px;
-    }
 
     &.first::before {
         content: "Coin Select";
