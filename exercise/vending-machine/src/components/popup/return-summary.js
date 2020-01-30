@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
-import Modal from "react-bootstrap/Modal";
+
 import Button from "react-bootstrap/Button";
 import CoinPrinter from "./coin-printer/coin-printer";
+import Modal from "react-bootstrap/Modal";
+import PropTypes from "prop-types";
 
 /**
  * Popup box shows returned coin
@@ -42,7 +43,9 @@ export default class ReturnSummary extends Component {
         </Modal.Header>
         <Modal.Body>
           <p>
-            <strong>{`Here is your ${pluralizeCoin(false)}`}: {this.props.money} baht</strong>
+            <strong>
+              {`Here is your ${pluralizeCoin(false)}`}: {this.props.money} baht
+            </strong>
           </p>
           <p>10 baht coin: {this.props.coins["10"]}</p>
           <p>5 baht coin: {this.props.coins["5"]}</p>

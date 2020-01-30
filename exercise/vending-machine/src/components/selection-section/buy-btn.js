@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
-import Tooltip from "react-bootstrap/Tooltip";
+
 import Button from "react-bootstrap/Button";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import PropTypes from "prop-types";
+import Tooltip from "react-bootstrap/Tooltip";
 import styles from "./sel-sec.module.scss";
 
 /**
@@ -30,7 +31,7 @@ export default class BuyBtn extends Component {
     }
     return (
       <Button
-        variant="outline-secondary"
+        variant="secondary"
         onClick={() => this.props.handleBuy(this.props.product)}
         id={"prod_" + this.props.product.id + "_btn"}
       >

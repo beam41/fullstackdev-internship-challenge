@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+
+import BuyBtn from "./buy-btn";
+import Col from "react-bootstrap/Col";
+import ProductLoading from "./product-loading";
 import PropTypes from "prop-types";
 import styles from "./sel-sec.module.scss";
-import Col from "react-bootstrap/Col";
-import BuyBtn from "./buy-btn";
 
 /**
  * Component for each box of product
@@ -51,7 +53,7 @@ export default class ProductBox extends Component {
       <Col xl="4" md="6" xs="12" className={styles.prodCol} id={"prod_" + product.id}>
         <div className={styles.prodBox}>
           <div ref={this.imgWarpper} className={styles.imgWarpper} style={{ height: this.state.imgWidth }}>
-            <img src={product.image} alt={product.name} id={"prod_" + product.id + "_img"}></img>
+            <img src={product.image} alt={product.name} id={"prod_" + product.id + "_img"} />
           </div>
           <h3 id={"prod_" + product.id + "_name"}>{product.name}</h3>
           <p id={"prod_" + product.id + "_price"}>{product.price + " baht"}</p>

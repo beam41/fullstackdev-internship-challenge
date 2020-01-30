@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
-import styles from "./coin-print.module.scss";
+
 import OtherCoin from "../../coin-btn/other-coin";
+import PropTypes from "prop-types";
 import TenCoin from "../../coin-btn/ten-coin";
+import styles from "./coin-print.module.scss";
 
 /**
  * For displaying coin on blank space
@@ -26,7 +27,7 @@ export default class CoinPrinter extends Component {
             <span
               style={{
                 transform: `translate(${Math.random() * 50 - 25}px, ${Math.random() * 50 - 25}px)
-                              scale(0.5)
+                              scale(0.7)
                               rotate(${Math.random() * 90 - 45}deg) `,
               }}
               className={styles.coin}

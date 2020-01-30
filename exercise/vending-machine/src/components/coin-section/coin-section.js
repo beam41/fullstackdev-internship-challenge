@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
-import styles from "./coin-sec.module.scss";
+
 import Button from "react-bootstrap/Button";
 import OtherCoin from "../coin-btn/other-coin";
+import PropTypes from "prop-types";
 import TenCoin from "../coin-btn/ten-coin";
+import styles from "./coin-sec.module.scss";
 
 /**
  * For inserting and refund coins

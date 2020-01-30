@@ -10,6 +10,7 @@
 .stylizedbox {
     padding: 20px;
     @include machine-border;
+    background-color: rgb(250, 250, 250);
 
     &::before {
         content: "▼Coin insert";

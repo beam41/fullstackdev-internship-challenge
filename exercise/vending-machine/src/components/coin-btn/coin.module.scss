@@ -46,10 +46,7 @@
     text-align: center;
     margin: 0;
     position: absolute;
-
-    &::selection {
-        background: none;
-    }
+    user-select: none;
 }
 
 .coinNTen {

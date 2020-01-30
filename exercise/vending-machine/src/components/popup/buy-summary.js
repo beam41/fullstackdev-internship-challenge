@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
-import Modal from "react-bootstrap/Modal";
+
 import Button from "react-bootstrap/Button";
 import CoinPrinter from "./coin-printer/coin-printer";
+import Modal from "react-bootstrap/Modal";
+import PropTypes from "prop-types";
 
 /**
  * Popup box shows bought item and coin change
@@ -66,7 +67,7 @@ export default class BuySummary extends Component {
               </p>
               <p>
                 <strong>
-                  You inserted {this.props.money} baht{this.props.money === product.price ? ", exactly." : ""}
+                  You inserted {this.props.money} baht{this.props.money === product.price ? ", it's exact!" : ""}
                 </strong>
               </p>
               {this.props.money > product.price && (

@@ -1,64 +1,77 @@
-@import '../../var.scss';
+@import "../../var.scss";
 
 .prodCol {
-    text-align: center;
-    padding: 15px;
+  text-align: center;
+  padding: 15px;
 
-    & * {
-        max-width: 100%;
-    }
+  & * {
+    max-width: 100%;
+  }
 
-    & img {
-        margin: auto;
-    }
+  & img {
+    margin: auto;
+  }
 
-    & p {
-        margin: auto;
-        margin-bottom: 1rem;
-    }
+  & p {
+    margin: auto;
+    margin-bottom: 1rem;
+  }
 }
 
 .imgWarpper {
-    display: flex;
-    justify-items: center;
-    background-color: #f7f7f7;
-    margin-bottom: 1rem;
+  display: flex;
+  justify-items: center;
+  background-color: #f7f7f7;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 992px) {
-    .container {
-        overflow-y: scroll;
-    }
+  .container {
+    overflow-y: auto;
+  }
 
-    .containerWrapper {
-        height: 100vh;
-    }
-
+  .containerWrapper {
+    height: 100vh;
+  }
 }
 
 .containerWrapper {
-    display: flex;
-    padding: 25px 5px 20px 5px;
+  display: flex;
+  padding: 25px 5px 20px 5px;
 }
 
 .container {
-    @include machine-border;
+  @include machine-border;
 
-    &::before {
-        content: "▼Choose one";
-        position: absolute;
-        transform: translate(0, -20px);
-        font-size: 0.75rem;
-        color: $machine-border-color;
-        font-family: $bffont;
-    }
+  &>div {
+    min-height: 100%;
+    background-color: #fafafa;
+  }
+
+  &::before {
+    content: "▼Choose one";
+    position: absolute;
+    transform: translate(0, -20px);
+    font-size: 0.75rem;
+    color: $machine-border-color;
+    font-family: $bffont;
+  }
 }
 
 .prodBox {
-    @include machine-border;
-    padding: 20px;
+  @include machine-border;
+  padding: 20px;
+  background-color: white;
 }
 
 .disabled {
-    pointer-events: none;
+  pointer-events: none;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: inherit;
 }
