@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/internship-challenge/static/css/main.38851faa.chunk.css",
+    "main.js": "/internship-challenge/static/js/main.a7004d31.chunk.js",
+    "runtime-main.js": "/internship-challenge/static/js/runtime-main.ac1abc9e.js",
+    "static/js/2.865c838e.chunk.js": "/internship-challenge/static/js/2.865c838e.chunk.js",
+    "index.html": "/internship-challenge/index.html",
+    "precache-manifest.d3be23de4f69b931c7bade312121463f.js": "/internship-challenge/precache-manifest.d3be23de4f69b931c7bade312121463f.js",
+    "service-worker.js": "/internship-challenge/service-worker.js",
+    "static/js/2.865c838e.chunk.js.LICENSE": "/internship-challenge/static/js/2.865c838e.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ac1abc9e.js",
+    "static/js/2.865c838e.chunk.js",
+    "static/css/main.38851faa.chunk.css",
+    "static/js/main.a7004d31.chunk.js"
+  ]
+}
