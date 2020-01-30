@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 import BuyBtn from "./buy-btn";
 import Col from "react-bootstrap/Col";
-import ProductLoading from "./product-loading";
 import PropTypes from "prop-types";
 import styles from "./sel-sec.module.scss";
 

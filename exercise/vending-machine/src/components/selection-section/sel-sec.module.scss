@@ -46,6 +46,7 @@
   &>div {
     min-height: 100%;
     background-color: #fafafa;
+    border-radius: $machine-border-radius;
   }
 
   &::before {
