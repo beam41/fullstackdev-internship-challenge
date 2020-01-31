@@ -21,3 +21,5 @@ I use built in `fetch` for API call.
 ## Website
 
 You can visit the hosted site [here](https://beam41-internship.herokuapp.com/).
+
+Note: I also host this project on [gh-pages](https://beam41.github.io/fullstackdev-internship-challenge), but it's problably broken and it's not latest. So, please use the former link hosted on Heroku.
